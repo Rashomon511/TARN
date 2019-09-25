@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper'
 import withReduxSaga from 'next-redux-saga'
 import initStore from '../redux/store'
-// import withReduxStore from '../lib/with-redux-store'
 
 import '../assets/index.less'
 
@@ -20,7 +19,7 @@ class Layout extends React.Component {
 }
 
 class MyApp extends App {
-    static async getInitialProps ({ Component, ctx }) {
+    static async getInitialProps ({ Component, ctx }: any) {
         let pageProps = {};
     
         if (Component.getInitialProps) {
@@ -30,7 +29,7 @@ class MyApp extends App {
         return { pageProps };
       }
     render() {
-        const { Component, pageProps, store } = this.props
+        const { Component, pageProps, store }: any = this.props
         return (
             <Provider store={store}>
                 <Layout>

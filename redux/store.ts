@@ -5,7 +5,7 @@ import {rootReducer, InitialState} from './reducers/index'
 import rootSaga from './saga/index'
 
 
-const bindMiddleware = middleware => {
+const bindMiddleware = (middleware: any) => {
   if (process.env.NODE_ENV !== 'production') {
     return composeWithDevTools(applyMiddleware(...middleware))
   }
@@ -14,7 +14,7 @@ const bindMiddleware = middleware => {
 
 function initializeStore (initialState = InitialState) {
   const sagaMiddleware = createSagaMiddleware()
-  const store = createStore(
+  const store: any = createStore(
     rootReducer,
     initialState,
     bindMiddleware([sagaMiddleware])

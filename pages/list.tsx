@@ -4,19 +4,19 @@ import {List, Avatar} from 'antd';
 import { loadData } from '../redux/actions/list'
 
 class Lists extends React.Component {
-  static async getInitialProps (props) {
+  static async getInitialProps (props: any) {
     const { store, isServer } = props.ctx
     store.dispatch(loadData())
     return { isServer }
   }
 
   render () {
-    const {list: {data}} = this.props;
+    const {list: {data}}: any = this.props;
     return (
       <List
       itemLayout="horizontal"
       dataSource={data}
-      renderItem={item => (
+      renderItem={(item: any) => (
         <List.Item>
           <List.Item.Meta
             avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
@@ -30,7 +30,7 @@ class Lists extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: any) => ({
 	list: state.list
 });
 

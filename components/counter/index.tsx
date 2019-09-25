@@ -1,5 +1,5 @@
 import {Button} from 'antd';
-function Counter(props) {
+function Counter(props: any) {
     const {counter: {count}, incrementCount, decrementCount, resetCount} = props;
     return (
         <div>

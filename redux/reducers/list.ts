@@ -5,7 +5,7 @@ const initState = {
     data: ''
 }
 
-const reducer = (state = initState, action) => {
+const reducer = (state = initState, action: any) => {
     switch (action.type) {
         case actionTypes.LOADSUCCESS:
             return {

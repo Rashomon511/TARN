@@ -5,7 +5,7 @@ const initState = {
     count: 0
 }
 
-const reducer = (state = initState, action) => {
+const reducer = (state = initState, action: any) => {
     switch (action.type) {
         case actionTypes.INCREMENT:
             return Object.assign({}, state, {
@@ -17,7 +17,7 @@ const reducer = (state = initState, action) => {
             })
         case actionTypes.RESET:
             return Object.assign({}, state, {
-                count: counterState.count
+                count: initState.count
             })
         default:
             return state

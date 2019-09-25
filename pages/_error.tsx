@@ -1,17 +1,18 @@
 import React from 'react'
 
 export default class Error extends React.Component {
-  static getInitialProps({ res, err }) {
+  static getInitialProps({ res, err }: any) {
     const statusCode = res ? res.statusCode : err ? err.statusCode : null;
     return { statusCode }
   }
 
   render() {
+    const {statusCode} :any = this.props;
     return (
       <p>
         <img src='../static/timg.jpeg'/>
-        {this.props.statusCode
-          ? `An error ${this.props.statusCode} occurred on server`
+        {statusCode
+          ? `An error ${statusCode} occurred on server`
           : 'An error occurred on client'}
       </p>
     )

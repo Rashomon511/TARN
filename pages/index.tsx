@@ -3,13 +3,10 @@ import { connect } from 'react-redux';
 import { incrementCount, decrementCount, resetCount  } from '../redux/actions/counter';
 import Counter from '../components/counter/index';
 
-class Index extends React.Component {
-
-  render () {
-    return <Counter {...this.props}/>
-  }
+function Index(props: any){
+  return <Counter {...props}/>
 }
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch: any) => ({
 	incrementCount() {
 		dispatch(incrementCount());
   },
@@ -21,7 +18,7 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: any) => ({
 	counter: state.counter
 });
 
