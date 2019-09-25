@@ -1,8 +1,11 @@
 // REDUCERS
 import * as actionTypes from '../constants/index';
-import { counterState }from '../InitialState/index';
 
-const reducer = (state = counterState, action) => {
+const initState = {
+    count: 0
+}
+
+const reducer = (state = initState, action) => {
     switch (action.type) {
         case actionTypes.INCREMENT:
             return Object.assign({}, state, {
@@ -21,4 +24,4 @@ const reducer = (state = counterState, action) => {
     }
 }
 
-export default reducer;
+export default {reducer, initState};
