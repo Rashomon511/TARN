@@ -1,14 +1,14 @@
 /* global fetch */
 
 import { all, put, takeLatest } from 'redux-saga/effects'
-import es6promise from 'es6-promise'
+// import es6promise from 'es6-promise'
 import 'isomorphic-unfetch'
 
 import * as actionTypes from '../constants/index';
 
 import { loadDataSuccess,  failure} from '../actions/list'
 
-es6promise.polyfill()
+// es6promise.polyfill()
 
 
 function * loadDataSaga () {

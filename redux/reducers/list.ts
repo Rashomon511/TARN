@@ -1,11 +1,20 @@
 // REDUCERS
 import * as actionTypes from '../constants/index';
 
-const initState = {
-    data: ''
+interface State {
+    data: any[]
 }
 
-const reducer = (state = initState, action: any) => {
+interface Action {
+    type: string
+    [propName: string]: any
+}
+
+const initState: State = {
+    data: []
+}
+
+const reducer = (state: State = initState, action: Action): State => {
     switch (action.type) {
         case actionTypes.LOADSUCCESS:
             return {

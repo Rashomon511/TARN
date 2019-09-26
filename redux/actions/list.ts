@@ -2,15 +2,20 @@
 import * as actionTypes from '../constants/index'
 
 
-export const loadDataSuccess = (data: []) => {
+interface Action {
+    type: string
+    [propName: string]: any
+}
+
+export const loadDataSuccess = (data: any[]): Action => {
     return { type: actionTypes.LOADSUCCESS, data }
 }
 
-export const loadData = () => {
+export const loadData = (): Action => {
     return { type: actionTypes.LOADDATA }
 }
 
-export const failure = (data: string) => {
+export const failure = (data: string): Action => {
     return {
         type: actionTypes.FAILURE,
         data

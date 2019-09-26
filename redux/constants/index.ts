@@ -1,6 +1,6 @@
-export const INCREMENT = 'INCREMENT'
-export const DECREMENT = 'DECREMENT'
-export const RESET = 'RESET'
-export const LOADDATA = "LOADDATA"
-export const LOADSUCCESS = "LOADSUCCESS"
-export const FAILURE = 'FAILURE'
+export const INCREMENT: string = 'INCREMENT'
+export const DECREMENT: string = 'DECREMENT'
+export const RESET: string = 'RESET'
+export const LOADDATA: string = "LOADDATA"
+export const LOADSUCCESS: string = "LOADSUCCESS"
+export const FAILURE: string = 'FAILURE'

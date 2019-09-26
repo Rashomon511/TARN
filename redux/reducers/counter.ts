@@ -1,11 +1,19 @@
 // REDUCERS
 import * as actionTypes from '../constants/index';
 
-const initState = {
+interface State {
+    count: number
+}
+
+interface Action {
+    type: string
+}
+
+const initState: State = {
     count: 0
 }
 
-const reducer = (state = initState, action: any) => {
+const reducer = (state: State = initState, action: Action) :State => {
     switch (action.type) {
         case actionTypes.INCREMENT:
             return Object.assign({}, state, {

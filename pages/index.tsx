@@ -18,7 +18,7 @@ const mapDispatchToProps = (dispatch: any) => ({
   }
 });
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: { counter: any; }) => ({
 	counter: state.counter
 });
 
