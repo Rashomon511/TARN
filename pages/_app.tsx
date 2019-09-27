@@ -4,19 +4,9 @@ import { Provider } from 'react-redux';
 import Head from 'next/head'
 import withRedux from 'next-redux-wrapper'
 import withReduxSaga from 'next-redux-saga'
+import Layout from '../components/Layout'
 import initStore from '../redux/store'
 import '../static/style/index.less'
-
-class Layout extends React.Component {
-    render() {
-        const { children } = this.props
-        return (
-            <div className='layout'>
-                {children}
-            </div>
-        )
-    }
-}
 
 class MyApp extends App {
     static async getInitialProps({ Component, ctx }: any) {

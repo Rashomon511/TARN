@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
           <meta name="keywords" content="next" />
           <meta name="renderer" content="webkit" />
           <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-          <link rel='shortcut icon' type='image/x-icon' href='/static/favicon.ico' />
+          <link rel='shortcut icon' type='image/x-icon' href='/static/images/favicon.ico' />
         </Head>
         <body className="custom_class">
           <Main />
