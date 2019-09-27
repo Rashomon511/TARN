@@ -4,7 +4,7 @@ import { incrementCount, decrementCount, resetCount  } from '../redux/actions/co
 import Counter from '../components/counter/index';
 
 function Index(props: any){
-  return <Counter {...props}/>
+  return  <Counter {...props}/>
 }
 const mapDispatchToProps = (dispatch: any) => ({
 	incrementCount() {
